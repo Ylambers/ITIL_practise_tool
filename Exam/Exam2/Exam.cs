@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 
 namespace Exam2
 {
@@ -60,6 +61,7 @@ namespace Exam2
             {
                 using StreamReader reader = new StreamReader(questionsFile);
                 var questionsString = reader.ReadToEnd();
+                questionsString = Regex.Replace(questionsString, @"\r\n?|\n", " ");
                 var questionsAndAnswers = questionsString.Split(new string[] { "QUESTION ", "--" }, StringSplitOptions.RemoveEmptyEntries);
 
                 foreach(var question in questionsAndAnswers)
