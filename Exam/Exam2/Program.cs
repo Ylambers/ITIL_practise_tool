@@ -13,7 +13,7 @@ namespace Exam2
         /// <param name="args"><see cref="string[]"/> of arguments passed on startup</param>
         static void Main(string[] args)
         {
-            var exam = new Exam().StartExam();
+            new Exam().StartExam();
         }
     }
 }

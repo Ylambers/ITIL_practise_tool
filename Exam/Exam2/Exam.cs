@@ -1,4 +1,5 @@
-﻿using Exam2.Utilities;
+﻿using Exam2.Extensions;
+using Exam2.Utilities;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -23,6 +24,30 @@ namespace Exam2
         public Exam()
         {
             SetupExan();
+        }
+
+        /// <summary>
+        /// Starts the exam
+        /// </summary>
+        public void StartExam()
+        {
+            Console.WriteLine("Starting the exam, would you like the question to be shuffled? (y/n)");
+            if(Console.ReadKey().Key == ConsoleKey.Y)
+            {
+                _questionAndAnswers.Shuffle();
+            }
+            Console.WriteLine("Press Escape at any time to exit");
+
+            foreach(var questionAndAnswer in _questionAndAnswers)
+            {
+                Console.WriteLine("\r\n\r\n");
+                Console.WriteLine($"{questionAndAnswer.Question} \r\n {questionAndAnswer.AnswerA} \r\n {questionAndAnswer.AnswerB} \r\n {questionAndAnswer.AnswerC} \r\n {questionAndAnswer.AnswerD}");
+                if(Console.ReadKey().Key == ConsoleKey.Escape)
+                {
+                    Environment.Exit(0);
+                }
+                Console.WriteLine(questionAndAnswer.CorrectAnswer);
+            }
         }
 
         /// <summary>
