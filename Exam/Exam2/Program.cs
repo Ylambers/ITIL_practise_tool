@@ -2,11 +2,18 @@
 
 namespace Exam2
 {
-    class Program
+    /// <summary>
+    /// Defines the entry point of <see cref="Exam2"/>
+    /// </summary>
+    public class Program
     {
+        /// <summary>
+        /// Entry method of <see cref="Exam2"/>
+        /// </summary>
+        /// <param name="args"><see cref="string[]"/> of arguments passed on startup</param>
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var exam = new Exam().StartExam();
         }
     }
 }
