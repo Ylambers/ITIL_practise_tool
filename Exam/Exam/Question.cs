@@ -6,16 +6,11 @@ namespace Exam
 {
     public class Question
     {
-        public Question()
-        {
-            choices =  new List<Choice>();
-        }
+        public string AskedQuestion { get; set; }
 
-        public string askedQuestion { get; set; }
+        public List<Choice> Choices = new List<Choice>();
 
-        public List<Choice> choices;
-
-        public string correctAnswer { get; set; }
+        public string CorrectAnswer { get; set; }
 
     }
 }

@@ -24,15 +24,15 @@ namespace Exam
             var length = Questions.Count;
             var random = RandomNumber(length);
 
-            Console.WriteLine(Questions[random].askedQuestion);
-            foreach (var choice in Questions[random].choices)
+            Console.WriteLine(Questions[random].AskedQuestion);
+            foreach (var choice in Questions[random].Choices)
             {
                 Console.WriteLine(choice.AvailableChoice);
             }
 
             Console.ReadLine();
 
-            Console.WriteLine(Questions[random].correctAnswer);
+            Console.WriteLine(Questions[random].CorrectAnswer);
         }
 
 
@@ -64,25 +64,25 @@ namespace Exam
                     {
                         if (line.Contains("?"))
                         {
-                            q.askedQuestion += " " + line;
+                            q.AskedQuestion += " " + line;
                             foundQuestion = true;
                         }
 
                         if (!foundQuestion)
                         {
-                            q.askedQuestion += line;
+                            q.AskedQuestion += line;
                         }
 
 
                         if (line.Contains("A.") || line.Contains("B.") || line.Contains("C.") || line.Contains("D."))
                         {
-                            q.choices.Add(new Choice(line));
+                            q.Choices.Add(new Choice(line));
                         }
 
 
                         if (line.Contains("Correct"))
                         {
-                            q.correctAnswer = line;
+                            q.CorrectAnswer = line;
                             Questions.Add(q);
 
                             foundQuestion = false;

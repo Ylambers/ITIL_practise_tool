@@ -8,15 +8,13 @@ namespace Exam
     {
         static void Main(string[] args)
         {
-            
-
             Exam e = new Exam();
 
             var exit = Console.ReadLine();
             do
             {
                 Console.Clear();
-                e.takeExam();
+                e.TakeExam();
 
                 if (Console.ReadLine() == "exit")
                 {

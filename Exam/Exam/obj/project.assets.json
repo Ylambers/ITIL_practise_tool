@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Yaron Lambers\\dev\\exam\\Exam\\Exam\\Exam.csproj",
+      "projectUniqueName": "C:\\Users\\Yaron Lambers\\dev\\ITIL_practise_tool\\Exam\\Exam\\Exam.csproj",
       "projectName": "Exam",
-      "projectPath": "C:\\Users\\Yaron Lambers\\dev\\exam\\Exam\\Exam\\Exam.csproj",
+      "projectPath": "C:\\Users\\Yaron Lambers\\dev\\ITIL_practise_tool\\Exam\\Exam\\Exam.csproj",
       "packagesPath": "C:\\Users\\Yaron Lambers\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Yaron Lambers\\dev\\exam\\Exam\\Exam\\obj\\",
+      "outputPath": "C:\\Users\\Yaron Lambers\\dev\\ITIL_practise_tool\\Exam\\Exam\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Yaron Lambers\\AppData\\Roaming\\NuGet\\NuGet.Config",
