@@ -6,7 +6,7 @@ namespace Exam
 {
     public static class Header
     {
-        public static void message()
+        public static void Message()
         {
             Console.WriteLine("=============");
             Console.WriteLine("ITIL PRACTISE EXAM");

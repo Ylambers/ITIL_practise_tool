@@ -8,7 +8,7 @@ namespace Exam
     {
         static void Main(string[] args)
         {
-            Header.message();
+            Header.Message();
 
             Exam e = new Exam();
 

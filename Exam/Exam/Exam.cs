@@ -17,7 +17,9 @@ namespace Exam
         }
 
         /// <summary>
-        /// Function that is called for question iteration
+        /// Function that is called for exam rotation
+        /// Gets random question
+        /// Waits for user input to show the correct answer
         /// </summary>
         public void TakeExam()
         {
