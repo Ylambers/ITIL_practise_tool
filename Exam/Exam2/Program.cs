@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Exam2
+﻿namespace Exam2
 {
     /// <summary>
     /// Defines the entry point of <see cref="Exam2"/>

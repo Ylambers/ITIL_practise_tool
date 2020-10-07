@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Exam2
+﻿namespace Exam2
 {
     /// <summary>
     /// Defines a class that represents an question with the answers

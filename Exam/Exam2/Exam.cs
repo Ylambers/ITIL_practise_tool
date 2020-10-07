@@ -1,11 +1,10 @@
-﻿using Exam2.Extensions;
-using Exam2.Utilities;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
+using Exam2.Extensions;
+using Exam2.Utilities;
 
 namespace Exam2
 {

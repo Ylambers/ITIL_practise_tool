@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Threading;
 
 namespace Exam2
@@ -11,7 +9,7 @@ namespace Exam2
     public static class ThreadSafeRandom
     {
         /// <summary>
-        /// Thread safe instance of <see cref="Random"/> 
+        /// Thread safe instance of <see cref="Random"/>
         /// </summary>
         [ThreadStatic]
         private static Random? s_instance;
