@@ -1,0 +1,30 @@
+﻿QUESTION 154
+
+Which one of the following is the BEST definition of reliability?
+
+A. The availability of a service or component
+
+B. The level of risk that affects a service or process
+
+C. How long a service or configuration item (CI) can perform its function 
+without failing
+
+D. How quickly a service or component can be restored to normal working order
+
+Correct Answer: C
+
+
+QUESTION 2
+
+Which process or function is responsible for monitoring activities and events 
+in the IT infrastructure?
+
+A. Service level management
+
+B. IT operations management
+
+C. Capacity management
+
+D. Incident management
+
+Correct Answer: B
