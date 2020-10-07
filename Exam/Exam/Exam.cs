@@ -27,6 +27,7 @@ namespace Exam
             var random = RandomNumber(length);
 
             Console.WriteLine(Questions[random].AskedQuestion);
+            Console.WriteLine("");
             foreach (var choice in Questions[random].Choices)
             {
                 Console.WriteLine(choice.AvailableChoice);
@@ -56,12 +57,6 @@ namespace Exam
         {
             try
             {
-                // var filename = "/questions.txt"; // LIB with the questions
-                //
-                // string workingDirectory = Environment.CurrentDirectory;
-                // string projectDirectory = Directory.GetParent(workingDirectory).Parent.Parent.FullName; // GETS PARRENT DIRECTORY OF PROJECT
-
-
                 var text = AppDomain.CurrentDomain.BaseDirectory + "/questions.txt";
 
                 using (StreamReader sr = new StreamReader(text)) // LOAD questions 

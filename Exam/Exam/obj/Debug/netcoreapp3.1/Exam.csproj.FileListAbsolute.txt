@@ -24,3 +24,4 @@ C:\Users\Yaron Lambers\dev\ITIL_practise_tool\Exam\Exam\bin\Debug\netcoreapp3.1\
 C:\Users\Yaron Lambers\dev\ITIL_practise_tool\Exam\Exam\obj\Debug\netcoreapp3.1\Exam.dll
 C:\Users\Yaron Lambers\dev\ITIL_practise_tool\Exam\Exam\obj\Debug\netcoreapp3.1\Exam.pdb
 C:\Users\Yaron Lambers\dev\ITIL_practise_tool\Exam\Exam\obj\Debug\netcoreapp3.1\Exam.genruntimeconfig.cache
+C:\Users\Yaron Lambers\dev\ITIL_practise_tool\Exam\Exam\bin\Debug\netcoreapp3.1\questions.txt
