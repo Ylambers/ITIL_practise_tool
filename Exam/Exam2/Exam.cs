@@ -35,6 +35,7 @@ namespace Exam2
             if (Console.ReadKey().Key == ConsoleKey.Y)
             {
                 _questionAndAnswers.Shuffle();
+                Console.WriteLine("\r");
             }
             Console.WriteLine("Press Escape at any time to exit");
 
