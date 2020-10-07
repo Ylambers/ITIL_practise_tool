@@ -33,17 +33,17 @@ namespace Exam2
         public void StartExam()
         {
             Console.WriteLine("Starting the exam, would you like the question to be shuffled? (y/n)");
-            if(Console.ReadKey().Key == ConsoleKey.Y)
+            if (Console.ReadKey().Key == ConsoleKey.Y)
             {
                 _questionAndAnswers.Shuffle();
             }
             Console.WriteLine("Press Escape at any time to exit");
 
-            foreach(var questionAndAnswer in _questionAndAnswers)
+            foreach (var questionAndAnswer in _questionAndAnswers)
             {
                 Console.WriteLine("\r\n\r\n");
                 Console.WriteLine($"{questionAndAnswer.Question} \r\n {questionAndAnswer.AnswerA} \r\n {questionAndAnswer.AnswerB} \r\n {questionAndAnswer.AnswerC} \r\n {questionAndAnswer.AnswerD}");
-                if(Console.ReadKey().Key == ConsoleKey.Escape)
+                if (Console.ReadKey().Key == ConsoleKey.Escape)
                 {
                     Environment.Exit(0);
                 }
@@ -56,19 +56,19 @@ namespace Exam2
         /// </summary>
         private void SetupExan()
         {
-            using Stream? questionsFile = EmbeddedResourceUtility.GetEmbeddedResourceStream("Exam2.questions.txt");
-            if(questionsFile != null)
+            using var questionsFile = EmbeddedResourceUtility.GetEmbeddedResourceStream("Exam2.questions.txt");
+            if (questionsFile != null)
             {
-                using StreamReader reader = new StreamReader(questionsFile);
+                using var reader = new StreamReader(questionsFile);
                 var questionsString = reader.ReadToEnd();
                 questionsString = Regex.Replace(questionsString, @"\r\n?|\n", " ");
                 var questionsAndAnswers = questionsString.Split(new string[] { "QUESTION ", "--" }, StringSplitOptions.RemoveEmptyEntries);
 
-                foreach(var question in questionsAndAnswers)
+                foreach (var question in questionsAndAnswers)
                 {
                     var items = question.Split(new string[] { "A.", "B.", "C.", "D.", "Correct Answer:" }, StringSplitOptions.RemoveEmptyEntries);
 
-                    if(items.Length >= 5) // Questions and answers always contain over 5 items
+                    if (items.Length >= 5) // Questions and answers always contain over 5 items
                     {
                         _questionAndAnswers.Add(new QuestionAndAnswer(items[0], items[1], items[2], items[3], items[4], items.ElementAtOrDefault(5) ?? ""));
                     }

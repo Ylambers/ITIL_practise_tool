@@ -14,11 +14,11 @@ namespace Exam2
         /// Thread safe instance of <see cref="Random"/> 
         /// </summary>
         [ThreadStatic]
-        private static Random? _instance;
-        
+        private static Random? s_instance;
+
         /// <summary>
         /// Get an instance of this threads <see cref="Random"/>
         /// </summary>
-        public static Random GetThreadSafeRandom => _instance ??= new Random(unchecked(Environment.TickCount * 31 + Thread.CurrentThread.ManagedThreadId));
+        public static Random GetThreadSafeRandom => s_instance ??= new Random(unchecked(Environment.TickCount * 31 + Thread.CurrentThread.ManagedThreadId));
     }
 }
