@@ -11,9 +11,6 @@ namespace Exam2
         /// Entry method of <see cref="Exam2"/>
         /// </summary>
         /// <param name="args"><see cref="string[]"/> of arguments passed on startup</param>
-        static void Main(string[] args)
-        {
-            new Exam().StartExam();
-        }
+        private static void Main() => new Exam().StartExam();
     }
 }
