@@ -32,7 +32,6 @@ namespace Exam
                 Console.WriteLine(choice.AvailableChoice);
             }
             
-            Console.WriteLine("Press enter...");
             Console.ReadLine();
             Console.WriteLine(Questions[random].CorrectAnswer);
         }
@@ -57,12 +56,15 @@ namespace Exam
         {
             try
             {
-                var filename = "/questions.txt"; // LIB with the questions
+                // var filename = "/questions.txt"; // LIB with the questions
+                //
+                // string workingDirectory = Environment.CurrentDirectory;
+                // string projectDirectory = Directory.GetParent(workingDirectory).Parent.Parent.FullName; // GETS PARRENT DIRECTORY OF PROJECT
 
-                string workingDirectory = Environment.CurrentDirectory;
-                string projectDirectory = Directory.GetParent(workingDirectory).Parent.Parent.FullName; // GETS PARRENT DIRECTORY OF PROJECT
 
-                using (StreamReader sr = new StreamReader(projectDirectory + filename)) // LOAD questions 
+                var text = AppDomain.CurrentDomain.BaseDirectory + "/questions.txt";
+
+                using (StreamReader sr = new StreamReader(text)) // LOAD questions 
                 {
                     string line;
                     bool foundQuestion = false;
