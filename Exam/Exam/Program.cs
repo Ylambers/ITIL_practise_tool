@@ -8,6 +8,8 @@ namespace Exam
     {
         static void Main(string[] args)
         {
+            Header.message();
+
             Exam e = new Exam();
 
             var exit = Console.ReadLine();

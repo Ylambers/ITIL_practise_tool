@@ -12,13 +12,13 @@ namespace Exam
 
         public Exam()
         {
-            Header.message();
-
             Questions = new List<Question>();
-            populateList();
+            PopulateList();
         }
 
-
+        /// <summary>
+        /// Function that is called for question iteration
+        /// </summary>
         public void TakeExam()
         {
             var length = Questions.Count;
@@ -31,11 +31,14 @@ namespace Exam
             }
 
             Console.ReadLine();
-
             Console.WriteLine(Questions[random].CorrectAnswer);
         }
 
-
+        /// <summary>
+        /// Get random number
+        /// </summary>
+        /// <param name="max"></param>
+        /// <returns></returns>
         private int RandomNumber(int max)
         {
             int number;
@@ -44,42 +47,45 @@ namespace Exam
             return number;
         }
 
-        private void populateList()
+        /// <summary>
+        /// Populates list for iteration
+        /// </summary>
+        private void PopulateList()
         {
             try
             {
-                var filename = "/questions.txt";
+                var filename = "/questions.txt"; // LIB with the questions
 
                 string workingDirectory = Environment.CurrentDirectory;
-                string projectDirectory = Directory.GetParent(workingDirectory).Parent.Parent.FullName;
+                string projectDirectory = Directory.GetParent(workingDirectory).Parent.Parent.FullName; // GETS PARRENT DIRECTORY OF PROJECT
 
-                using (StreamReader sr = new StreamReader(projectDirectory + filename))
+                using (StreamReader sr = new StreamReader(projectDirectory + filename)) // LOAD questions 
                 {
                     string line;
                     bool foundQuestion = false;
 
                     Question q = new Question();
 
-                    while ((line = sr.ReadLine()) != null)
+                    while ((line = sr.ReadLine()) != null) // READ QUESTIONS
                     {
-                        if (line.Contains("?"))
+                        if (line.Contains("?")) // FIND asked QUESTION
                         {
                             q.AskedQuestion += " " + line;
                             foundQuestion = true;
                         }
 
-                        if (!foundQuestion)
+                        if (!foundQuestion) // ADDS question to object
                         {
                             q.AskedQuestion += line;
                         }
 
-
+                        // FIND ANWSERS
                         if (line.Contains("A.") || line.Contains("B.") || line.Contains("C.") || line.Contains("D."))
                         {
                             q.Choices.Add(new Choice(line));
                         }
 
-
+                        // FIND CORRECT ANWSER
                         if (line.Contains("Correct"))
                         {
                             q.CorrectAnswer = line;
@@ -87,7 +93,7 @@ namespace Exam
 
                             foundQuestion = false;
 
-                            q = new Question();
+                            q = new Question(); // MAKES NEW QUESTION
                         }
                     }
                 }
