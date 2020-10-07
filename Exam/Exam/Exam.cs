@@ -31,7 +31,8 @@ namespace Exam
             {
                 Console.WriteLine(choice.AvailableChoice);
             }
-
+            
+            Console.WriteLine("Press enter...");
             Console.ReadLine();
             Console.WriteLine(Questions[random].CorrectAnswer);
         }
