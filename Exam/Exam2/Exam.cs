@@ -23,7 +23,7 @@ namespace Exam2
         /// </summary>
         public Exam()
         {
-            SetupExan();
+            SetupExam();
         }
 
         /// <summary>
@@ -53,7 +53,7 @@ namespace Exam2
         /// <summary>
         /// Setup the exam by creating the questions and answers
         /// </summary>
-        private void SetupExan()
+        private void SetupExam()
         {
             using var questionsFile = EmbeddedResourceUtility.GetEmbeddedResourceStream("Exam2.questions.txt");
             if (questionsFile != null)
