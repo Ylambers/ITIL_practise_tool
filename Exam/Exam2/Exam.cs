@@ -23,7 +23,7 @@ namespace Exam2
         /// </summary>
         public Exam()
         {
-            SetupExan();
+            SetupExam();
         }
 
         /// <summary>
@@ -35,6 +35,7 @@ namespace Exam2
             if (Console.ReadKey().Key == ConsoleKey.Y)
             {
                 _questionAndAnswers.Shuffle();
+                Console.WriteLine("\r");
             }
             Console.WriteLine("Press Escape at any time to exit");
 
@@ -53,7 +54,7 @@ namespace Exam2
         /// <summary>
         /// Setup the exam by creating the questions and answers
         /// </summary>
-        private void SetupExan()
+        private void SetupExam()
         {
             using var questionsFile = EmbeddedResourceUtility.GetEmbeddedResourceStream("Exam2.questions.txt");
             if (questionsFile != null)
